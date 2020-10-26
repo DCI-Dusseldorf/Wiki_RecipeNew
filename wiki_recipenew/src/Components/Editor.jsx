@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import ReactHtmlParser from 'react-html-parser';
+
 import ReactSummernote from 'react-summernote';
 
 const addImage = ([file]) => {
