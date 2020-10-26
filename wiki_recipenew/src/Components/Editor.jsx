@@ -1,6 +1,10 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
+
+import { InputGroup } from 'react-bootstrap';
+import { FormControl } from 'react-bootstrap'
+
 import ReactSummernote from 'react-summernote';
 
 const addImage = ([file]) => {
@@ -10,12 +14,28 @@ const addImage = ([file]) => {
 };
 
 function Editor() {
+  const [text, setText] = React.useState('');
+  const onChangeHandler = (data) => {
+    setText(data);
+  };
+
   return (
     <>
+      <InputGroup className='container mt-5'>
+        <FormControl
+          placeholder='Tittle Of the Recepi'
+          aria-label='Tittle Of Recepi'
+          aria-describedby='basic-addon2'
+          
+        />
+      
+      </InputGroup>
       <div className='container mt-2'>
+
         <ReactSummernote
+         value={text}
           options={{
-            height: 350,
+            height: 250,
             dialogsInBody: true,
             toolbar: [
               ['style', ['style']],
@@ -28,6 +48,7 @@ function Editor() {
             ],
           }}
           onImageUpload={addImage}
+          onChange={onChangeHandler}
         />
         <Button className='mt-3' color='primary mt-5'>
           New Page

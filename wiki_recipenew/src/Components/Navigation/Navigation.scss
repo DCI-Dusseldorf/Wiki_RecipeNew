@@ -1,0 +1,23 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    background-color: rgb(91, 161, 24);
+    color: white;
+    padding: 20px;
+    .logo {
+      font-size: 25px;
+      font-weight: 400;
+      margin-left: 20px;
+    }
+  
+    .navLinks {
+      .link {
+        text-decoration: none;
+        margin-left: 10px;
+        color: white;
+      }
+    }
+  }
+  
