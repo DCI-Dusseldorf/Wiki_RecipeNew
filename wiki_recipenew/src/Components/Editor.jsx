@@ -1,9 +1,8 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
-
 import { InputGroup } from 'react-bootstrap';
-import { FormControl } from 'react-bootstrap'
+import { FormControl } from 'react-bootstrap';
 
 import ReactSummernote from 'react-summernote';
 
@@ -14,26 +13,32 @@ const addImage = ([file]) => {
 };
 
 function Editor() {
+  const [value, setValue] = React.useState('');
+
   const [text, setText] = React.useState('');
   const onChangeHandler = (data) => {
     setText(data);
   };
 
+  function save() {
+    console.log(text);
+    console.log(value);
+  }
+
   return (
     <>
       <InputGroup className='container mt-5'>
         <FormControl
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
           placeholder='Tittle Of the Recepi'
           aria-label='Tittle Of Recepi'
           aria-describedby='basic-addon2'
-          
         />
-      
       </InputGroup>
       <div className='container mt-2'>
-
         <ReactSummernote
-         value={text}
+          value={text}
           options={{
             height: 250,
             dialogsInBody: true,
@@ -50,7 +55,7 @@ function Editor() {
           onImageUpload={addImage}
           onChange={onChangeHandler}
         />
-        <Button className='mt-3' color='primary mt-5'>
+        <Button className='mt-3' color='primary mt-5' onClick={save}>
           New Page
         </Button>
 
