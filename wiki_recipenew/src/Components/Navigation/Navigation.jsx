@@ -14,12 +14,6 @@ function Navigation() {
           <Link to='/add' className='link'>
             Add
           </Link>
-          <Link to='/recipe' className='link'>
-            Recipe
-          </Link>
-          <Link to='/edit' className='link'>
-            Edit
-          </Link>
         </div>
       </div>
     </div>
