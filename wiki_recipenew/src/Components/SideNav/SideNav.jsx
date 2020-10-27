@@ -1,23 +1,21 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-import './SideNav.scss'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './SideNav.scss';
 
-function SideNav({list}) {
-    return (
-
-        <div>
-             {list.map((item) => {
-        return (
-            <div className= 'sidenav'>
-          <Link to={`/recipe/${item.title}`}>
-                <ol>{item.title}</ol>
-          </Link>
-          </div>
-        );
-      })}
-            
-        </div>
-    )
+function SideNav({ list }) {
+  return (
+    <div>
+      <div className='sidenav'>
+        {list.map((item) => {
+          return (
+            <Link to={`/recipe/${item.title}`}>
+              <p>{item.title}</p>
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
-export default SideNav
+export default SideNav;
