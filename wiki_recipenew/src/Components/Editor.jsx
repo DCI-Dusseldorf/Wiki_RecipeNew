@@ -8,10 +8,11 @@ const addImage = ([file]) => {
   reader.readAsDataURL(file);
 };
 
-function Editor() {
-  const titleUseRef = useRef(null);
-
+function Editor(props) {
   let [infoData, setInfoData] = useState('');
+  const titleUseRef = useRef(null);
+  /*
+  
 
   const [text, setText] = useState(
     JSON.parse(localStorage.getItem('textData')) || [
@@ -22,9 +23,8 @@ function Editor() {
   useEffect(() => {
     localStorage.setItem('textData', JSON.stringify(text));
   }, [text]);
-
+*/
   const onChangeHandler = (data) => {
-    //setText(data);
     setInfoData(data);
   };
 
@@ -35,13 +35,9 @@ function Editor() {
     let textObj = {};
     textObj.id = Math.floor(Date.now() / 1000);
     textObj.title = titleUseRef.current.value;
-
     textObj.description = infoData;
 
-    setText([...text, textObj]);
-    console.log(textObj);
-
-    console.log(text);
+    props.setList([...props.list, textObj]);
   }
 
   return (
@@ -49,15 +45,15 @@ function Editor() {
       <div className='container mt-2'>
         <input
           type='text'
-          placeholder='Title'
-          className=' mb-5'
+          placeholder='Add Title of Your Recipe...'
+          className=' mb-3'
           ref={titleUseRef}
         />
 
         <ReactSummernote
           value={infoData}
           options={{
-            height: 150,
+            height: 210,
             dialogsInBody: true,
 
             toolbar: [
@@ -74,10 +70,15 @@ function Editor() {
           onChange={onChangeHandler}
         />
         <Button className='mt-3' color='primary mt-5' onClick={save}>
-          Submit
+          Save
         </Button>
 
-        <Button className='mt-3 ml-5' color='primary mt-5' onClick={cancel}>
+        <Button
+          variant='danger'
+          className='mt-3 ml-5'
+          color='primary mt-5'
+          onClick={cancel}
+        >
           Cancel
         </Button>
       </div>

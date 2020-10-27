@@ -10,9 +10,12 @@ const SET = (k, v) => localStorage.setItem(k, JSON.stringify(v));
 const GET = (k) => JSON.parse(localStorage.getItem(k));
 
 function App() {
-  const [list, setList] = React.useState(GET('textData'));
+  const [list, setList] = React.useState(GET('textData') || []);
+
   function changeArticle(title, value) {
-    setList({ ...list, [title]: value });
+    list.title = title;
+    list.value = value;
+    setList([...list]);
   }
   useEffect(() => SET('textData', list), [list]);
   return (
@@ -21,12 +24,15 @@ function App() {
         <Navigation />
 
         <Switch>
-          <Route path='/recipe/:title'>
+          <Route path='/recipe/:title?'>
             <Recipe list={list} />
           </Route>
-          <Route path='/edit' component={Edit} />
-          <Route path='/recipe' component={Recipe} />
-          <Route path='/' exact component={Home} />
+          <Route path='/edit/:title'>
+            <Edit list={list} changeArticle={changeArticle} />
+          </Route>
+          <Route exact path='/'>
+            <Home list={list} setList={setList} />
+          </Route>
         </Switch>
       </div>
     </>
