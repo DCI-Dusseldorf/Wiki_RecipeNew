@@ -10,6 +10,8 @@ import 'bootstrap/js/dist/dropdown';
 import 'bootstrap/js/dist/tooltip';
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter } from 'react-router-dom';
+import $ from 'jquery';
+window.$ = window.jQuery = $;
 
 ReactDOM.render(
   <React.StrictMode>

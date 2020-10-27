@@ -8,7 +8,7 @@ function SideNav({ list }) {
       <div className='sidenav'>
         {list.map((item) => {
           return (
-            <Link to={`/recipe/${item.title}`}>
+            <Link className='link' to={`/${item.id}`}>
               <p>{item.title}</p>
             </Link>
           );
