@@ -5,6 +5,7 @@ import Edit from './Components/Pages/Edit';
 import Recipe from './Components/Pages/Recipe';
 import Navigation from './Components/Navigation/Navigation';
 import { Route, Switch } from 'react-router-dom';
+import SideNav from './Components/SideNav/SideNav';
 
 const SET = (k, v) => localStorage.setItem(k, JSON.stringify(v));
 const GET = (k) => JSON.parse(localStorage.getItem(k));
@@ -22,6 +23,7 @@ function App() {
     <>
       <div className='App'>
         <Navigation />
+        <SideNav list={list} setList={setList} />
 
         <Switch>
           <Route path='/recipe/:title?'>
