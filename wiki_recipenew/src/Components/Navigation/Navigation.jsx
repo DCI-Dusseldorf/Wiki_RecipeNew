@@ -11,6 +11,9 @@ function Navigation() {
           <Link to='/' className='link'>
             Home
           </Link>
+          <Link to='/add' className='link'>
+            Add
+          </Link>
           <Link to='/recipe' className='link'>
             Recipe
           </Link>

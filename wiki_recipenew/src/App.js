@@ -1,12 +1,14 @@
 import './App.css';
 import React, { useEffect } from 'react';
-import Home from './Components/Pages/Home.jsx';
+import Home from './Components/Home/Home.jsx';
 import Edit from './Components/Pages/Edit';
 import Recipe from './Components/Pages/Recipe';
 import Navigation from './Components/Navigation/Navigation';
 import { Route, Switch } from 'react-router-dom';
 import SideNav from './Components/SideNav/SideNav';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Add from './Components/Pages/Add'
+
 
 const SET = (k, v) => localStorage.setItem(k, JSON.stringify(v));
 const GET = (k) => JSON.parse(localStorage.getItem(k));
@@ -35,8 +37,12 @@ function App() {
               <Route path='/edit/:title'>
                 <Edit list={list} changeArticle={changeArticle} />
               </Route>
+              <Route exact path='/add'>
+                <Add  list={list} setList={setList} />
+              </Route>
+
               <Route exact path='/'>
-                <Home list={list} setList={setList} />
+                <Home  />
               </Route>
             </Switch>
           </div>

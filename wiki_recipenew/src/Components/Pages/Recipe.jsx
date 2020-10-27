@@ -6,7 +6,7 @@ import ReactHtmlParser from 'react-html-parser';
 export default function Recipe({ list }) {
   const params = useParams();
   //const article = list[params.title];
-  console.log(list);
+  console.log(list.descriptionnpm );
   return (
     <>
       <h1>{params.title}</h1>
