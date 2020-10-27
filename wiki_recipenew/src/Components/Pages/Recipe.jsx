@@ -1,11 +1,21 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
+import { Link, useParams } from 'react-router-dom';
 
-function Recipe() {
+export default function Recipe({ list }) {
+  const params = useParams();
+  //const article = props.list[params.title];
+  //const recipes = JSON.parse(localStorage.getItem('textData'));
+  console.log(list);
   return (
     <div>
-      <h1>Recipe</h1>
+      {list.map((item) => {
+        return (
+          <Link to={`/edit/${item.title}`}>
+            <p>{item.title}</p>
+          </Link>
+        );
+      })}
     </div>
   );
 }
-
-export default Recipe;

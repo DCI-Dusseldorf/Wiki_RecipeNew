@@ -1,9 +1,5 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Button } from 'react-bootstrap';
-
-import { InputGroup } from 'react-bootstrap';
-import { FormControl } from 'react-bootstrap';
-
 import ReactSummernote from 'react-summernote';
 
 const addImage = ([file]) => {
@@ -12,36 +8,54 @@ const addImage = ([file]) => {
   reader.readAsDataURL(file);
 };
 
-function Editor() {
-  const [value, setValue] = React.useState('');
+function Editor(props) {
+  let [infoData, setInfoData] = useState('');
+  const titleUseRef = useRef(null);
+  /*
+  
 
-  const [text, setText] = React.useState('');
+  const [text, setText] = useState(
+    JSON.parse(localStorage.getItem('textData')) || [
+      { id: 0, title: 'sample', info: 'sampleInfo' },
+    ]
+  );
+
+  useEffect(() => {
+    localStorage.setItem('textData', JSON.stringify(text));
+  }, [text]);
+*/
   const onChangeHandler = (data) => {
-    setText(data);
+    setInfoData(data);
   };
 
-  function save() {
-    console.log(text);
-    console.log(value);
+  function cancel() {}
+  function save(e) {
+    e.preventDefault();
+
+    let textObj = {};
+    textObj.id = Math.floor(Date.now() / 1000);
+    textObj.title = titleUseRef.current.value;
+    textObj.description = infoData;
+
+    props.setList([...props.list, textObj]);
   }
 
   return (
     <>
-      <InputGroup className='container mt-5'>
-        <FormControl
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          placeholder='Tittle Of the Recepi'
-          aria-label='Tittle Of Recepi'
-          aria-describedby='basic-addon2'
-        />
-      </InputGroup>
       <div className='container mt-2'>
+        <input
+          type='text'
+          placeholder='Add Title of Your Recipe...'
+          className=' mb-3'
+          ref={titleUseRef}
+        />
+
         <ReactSummernote
-          value={text}
+          value={infoData}
           options={{
-            height: 250,
+            height: 210,
             dialogsInBody: true,
+
             toolbar: [
               ['style', ['style']],
               ['font', ['bold', 'underline', 'clear']],
@@ -56,10 +70,15 @@ function Editor() {
           onChange={onChangeHandler}
         />
         <Button className='mt-3' color='primary mt-5' onClick={save}>
-          New Page
+          Save
         </Button>
 
-        <Button className='mt-3 ml-5' color='primary mt-5'>
+        <Button
+          variant='danger'
+          className='mt-3 ml-5'
+          color='primary mt-5'
+          onClick={cancel}
+        >
           Cancel
         </Button>
       </div>
