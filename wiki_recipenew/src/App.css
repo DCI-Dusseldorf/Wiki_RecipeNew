@@ -10,8 +10,9 @@
 }
 
 .content {
-  padding: 10px;
-  margin: 0 auto;
+  padding: 30px;
+  width: 85vw;
+  background-color: rgb(236, 236, 236);
 }
 .App-logo {
   height: 40vmin;

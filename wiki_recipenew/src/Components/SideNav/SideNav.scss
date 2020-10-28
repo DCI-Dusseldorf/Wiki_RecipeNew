@@ -1,6 +1,6 @@
 .sidenav {
-  height: 100%;
-  width: 160px;
+  height: auto;
+  width: 20vw;
   box-shadow: inset -2px 0 2px #0000001c;
   background-color: gray;
   overflow-y: hidden;
@@ -9,5 +9,9 @@
 
   .link {
     color: white;
+    font-size: 18px;
   }
+}
+h3 {
+  color: black;
 }

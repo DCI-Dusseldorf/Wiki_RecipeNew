@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import ReactHtmlParser from 'react-html-parser';
+import './Recipe.scss';
 
 export default function Recipe({ list, setList }) {
   const { id } = useParams();

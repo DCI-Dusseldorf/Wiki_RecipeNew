@@ -11,7 +11,7 @@ function Home() {
 
         <Link to='/add'>
           <Button className='btn' variant='primary'>
-            Add
+            Add Recipe
           </Button>
         </Link>
       </Jumbotron>
