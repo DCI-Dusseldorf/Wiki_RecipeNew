@@ -30,7 +30,7 @@ function Editor(props) {
 
   return (
     <>
-      <div className='container mt-2'>
+      <div className='container mt-2 '>
         <input
           type='text'
           placeholder='Add Title of Your Recipe...'

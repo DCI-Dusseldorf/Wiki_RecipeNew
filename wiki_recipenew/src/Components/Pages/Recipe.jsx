@@ -13,14 +13,20 @@ export default function Recipe({ list, setList }) {
   };
   return (
     <>
-      <h1>{article.title}</h1>
-      <h2>{ReactHtmlParser(article.description)}</h2>
-      <Link to={`/edit/${article.id}`}>
-        <button>Edit</button>
-      </Link>
-      <Link to='/'>
-        <button onClick={onDelete}>Delete</button>
-      </Link>
+      <div className='contentHeight'>
+        <h1>{article.title}</h1>
+        <h2>{ReactHtmlParser(article.description)}</h2>
+        <Link to={`/edit/${article.id}`}>
+          <Button className='mr-2' variant='secondary'>
+            Edit
+          </Button>
+        </Link>
+        <Link to='/'>
+          <Button variant='danger' onClick={onDelete}>
+            Delete
+          </Button>
+        </Link>
+      </div>
     </>
   );
 }

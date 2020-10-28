@@ -3,12 +3,14 @@
 }
 
 .main {
-  min-height: 85.5vh;
+  min-height: 85vh;
   width: 100%;
   display: flex;
+  height: auto;
 }
 
 .content {
+  padding: 10px;
   margin: 0 auto;
 }
 .App-logo {
