@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import ReactSummernote from 'react-summernote';
+import { Link } from 'react-router-dom';
 
 const addImage = ([file]) => {
   const reader = new FileReader();
@@ -17,6 +18,7 @@ function Editor(props) {
   };
 
   function cancel() {}
+
   function save(e) {
     e.preventDefault();
 
@@ -25,7 +27,7 @@ function Editor(props) {
     textObj.title = titleUseRef.current.value;
     textObj.description = infoData;
 
-    props.setList([...props.list, textObj]);
+    props.setList([textObj, ...props.list]);
   }
 
   return (
@@ -46,7 +48,7 @@ function Editor(props) {
 
             toolbar: [
               ['style', ['style']],
-              ['font', ['bold', 'underline', 'clear']],
+              ['font', ['bold', 'underline', 'clear', 'color']],
               ['fontname', ['fontname']],
               ['para', ['ul', 'ol', 'paragraph']],
               ['table', ['table']],
@@ -57,18 +59,15 @@ function Editor(props) {
           onImageUpload={addImage}
           onChange={onChangeHandler}
         />
-        <Button className='mt-3' color='primary mt-5' onClick={save}>
+        <Button className='mt-3 primary' onClick={save}>
           Save
         </Button>
 
-        <Button
-          variant='danger'
-          className='mt-3 ml-5'
-          color='primary mt-5'
-          onClick={cancel}
-        >
-          Cancel
-        </Button>
+        <Link to='/'>
+          <Button variant='danger' className='mt-3 ml-2' onClick={cancel}>
+            Cancel
+          </Button>
+        </Link>
       </div>
     </>
   );

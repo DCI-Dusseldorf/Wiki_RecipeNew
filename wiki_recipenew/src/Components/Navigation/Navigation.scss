@@ -1,25 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
 .nav {
   display: flex;
   position: sticky;
   top: 0;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(91, 161, 24);
+  background-color: rgb(121, 195, 52);
   color: white;
-  padding: 20px;
   height: 15vh;
   box-shadow: inset 0 -2px 2px #59773c94;
-  .logo {
-    font-size: 25px;
-    font-weight: 400;
-    margin-left: 20px;
-  }
 
+  .navHeader {
+    color: black;
+    font-size: 30px;
+    font-weight: 400;
+    margin-left: 220px;
+    font-family: 'Staatliches', cursive;
+  }
   .navLinks {
     .link {
+      font-size: 18px;
+      font-weight: 400;
       text-decoration: none;
       margin-left: 10px;
-      color: white;
+      margin-right: 15px;
+      color: black;
     }
   }
+}
+.logo {
+  color: white;
+  font-size: 60px;
+  margin-left: 40px;
+  margin-bottom: 15px;
 }

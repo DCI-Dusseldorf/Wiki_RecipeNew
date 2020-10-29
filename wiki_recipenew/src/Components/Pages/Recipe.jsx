@@ -2,12 +2,16 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import ReactHtmlParser from 'react-html-parser';
+import './Recipe.scss';
 
 export default function Recipe({ list, setList }) {
   const { id } = useParams();
   const index = list.findIndex((item) => item.id === +id);
   const article = list[index];
   const onDelete = () => {
+    if (index === -1) {
+      return;
+    }
     list.splice(index, 1);
     setList([...list]);
   };

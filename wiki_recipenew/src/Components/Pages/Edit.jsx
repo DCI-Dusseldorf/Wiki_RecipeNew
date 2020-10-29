@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
-import { Link, useHistory, useParams } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import { Link, useParams } from 'react-router-dom';
 import ReactSummernote from 'react-summernote';
 
 const addImage = ([file]) => {
@@ -46,7 +46,7 @@ export default function Edit({ list, setList }) {
 
           toolbar: [
             ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear']],
+            ['font', ['bold', 'underline', 'clear', 'color']],
             ['fontname', ['fontname']],
             ['para', ['ul', 'ol', 'paragraph']],
             ['table', ['table']],
