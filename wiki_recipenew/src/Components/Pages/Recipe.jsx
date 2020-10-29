@@ -9,6 +9,9 @@ export default function Recipe({ list, setList }) {
   const index = list.findIndex((item) => item.id === +id);
   const article = list[index];
   const onDelete = () => {
+    if (index === -1) {
+      return;
+    }
     list.splice(index, 1);
     setList([...list]);
   };

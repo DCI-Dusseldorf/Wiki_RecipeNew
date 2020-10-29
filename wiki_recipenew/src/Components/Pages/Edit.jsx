@@ -46,7 +46,7 @@ export default function Edit({ list, setList }) {
 
           toolbar: [
             ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear']],
+            ['font', ['bold', 'underline', 'clear', 'color']],
             ['fontname', ['fontname']],
             ['para', ['ul', 'ol', 'paragraph']],
             ['table', ['table']],

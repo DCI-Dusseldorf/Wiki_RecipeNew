@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import ReactSummernote from 'react-summernote';
+import { Link } from 'react-router-dom';
 
 const addImage = ([file]) => {
   const reader = new FileReader();
@@ -17,6 +18,7 @@ function Editor(props) {
   };
 
   function cancel() {}
+
   function save(e) {
     e.preventDefault();
 
@@ -46,7 +48,7 @@ function Editor(props) {
 
             toolbar: [
               ['style', ['style']],
-              ['font', ['bold', 'underline', 'clear']],
+              ['font', ['bold', 'underline', 'clear', 'color']],
               ['fontname', ['fontname']],
               ['para', ['ul', 'ol', 'paragraph']],
               ['table', ['table']],
@@ -61,9 +63,11 @@ function Editor(props) {
           Save
         </Button>
 
-        <Button variant='danger' className='mt-3 ml-2' onClick={cancel}>
-          Cancel
-        </Button>
+        <Link to='/'>
+          <Button variant='danger' className='mt-3 ml-2' onClick={cancel}>
+            Cancel
+          </Button>
+        </Link>
       </div>
     </>
   );
