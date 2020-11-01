@@ -5,11 +5,18 @@ import './SideNav.scss';
 function SideNav({ list }) {
   return (
     <div className='sidenav'>
-      <h3>Recipes</h3>
+      <div className ='Recipes'>
+        <h3>Recipes</h3>
+        </div>
+      
       {list.map((item) => {
         return (
           <Link className='link' to={`/${item.id}`}>
-            <p>{item.title}</p>
+            <div className='Box'>
+              <p>{item.title}</p>
+            </div>
+            
+
           </Link>
         );
       })}
