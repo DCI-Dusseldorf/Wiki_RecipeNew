@@ -1,34 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
-
 .sidenav {
   height: 90vh;
   width: 10vw;
   box-shadow: inset -2px 0 2px #0000001c;
-  background-color:#d39b54;
+  background-color: #d39b54;
   overflow-y: auto;
   padding-top: 20px;
-  text-align: left;
+  text-align: centre;
 
   .link {
-    color:#766845;
-    font-size: 18px;
+    color: #766845;
+    font-size: 28px;
     font-family: 'Cookie', cursive;
   }
 }
 .Recipes {
-  box-shadow: 10px 10px 12px  10px #d39b54;
-
+  box-shadow: 10px 10px 12px 10px #d39b54;
 }
-h3{
-  color:#ffff;
+h3 {
+  color: #ffff;
   font-family: 'Pacifico', cursive;
   -webkit-text-stroke: 1px #8a898d;
-  
 }
 
 .Box {
- border-bottom: 1px solid  #d49e55;
- box-shadow: 10px 10px 12px  10px#f0c966
+  border-bottom: 1px solid #d49e55;
+  box-shadow: 10px 10px 12px 10px#f0c966;
 }
