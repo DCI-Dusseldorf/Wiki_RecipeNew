@@ -19,7 +19,8 @@
 .Recipes {
   box-shadow: 10px 10px 12px 10px #d39b54;
 }
-h3 {
+span {
+  font-size: 30px;
   color: #ffff;
   font-weight: 600;
   font-family: 'Pacifico', cursive;
@@ -29,4 +30,14 @@ h3 {
 .Box {
   border-bottom: 1px solid #d49e55;
   box-shadow: 10px 10px 12px 10px#f0c966;
+}
+
+@media screen and (max-width: 600px) {
+  .sidenav .link {
+    font-size: 17px;
+  }
+  .Recipes span {
+    font-size: 17px;
+    box-shadow: 10px 10px 12px 10px #d39b54;
+  }
 }
