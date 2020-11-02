@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
 .sidenav {
-  height: 90vh;
-  width: 10vw;
+  height: 85vh;
+  width: 15vw;
   box-shadow: inset -2px 0 2px #0000001c;
   background-color: #d39b54;
   overflow-y: auto;
@@ -12,7 +12,7 @@
 
   .link {
     color: #766845;
-    font-size: 28px;
+    font-size: 25px;
     font-family: 'Cookie', cursive;
   }
 }
@@ -21,6 +21,7 @@
 }
 h3 {
   color: #ffff;
+  font-weight: 600;
   font-family: 'Pacifico', cursive;
   -webkit-text-stroke: 1px #8a898d;
 }
