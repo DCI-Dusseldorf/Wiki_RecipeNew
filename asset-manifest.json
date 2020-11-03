@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/wiki_recipenew/static/css/main.d9802ec3.chunk.css",
+    "main.js": "/wiki_recipenew/static/js/main.2eb07fa9.chunk.js",
+    "main.js.map": "/wiki_recipenew/static/js/main.2eb07fa9.chunk.js.map",
+    "runtime-main.js": "/wiki_recipenew/static/js/runtime-main.4bb7e300.js",
+    "runtime-main.js.map": "/wiki_recipenew/static/js/runtime-main.4bb7e300.js.map",
+    "static/css/2.5c5525dd.chunk.css": "/wiki_recipenew/static/css/2.5c5525dd.chunk.css",
+    "static/js/2.c8621719.chunk.js": "/wiki_recipenew/static/js/2.c8621719.chunk.js",
+    "static/js/2.c8621719.chunk.js.map": "/wiki_recipenew/static/js/2.c8621719.chunk.js.map",
+    "index.html": "/wiki_recipenew/index.html",
+    "static/css/2.5c5525dd.chunk.css.map": "/wiki_recipenew/static/css/2.5c5525dd.chunk.css.map",
+    "static/css/main.d9802ec3.chunk.css.map": "/wiki_recipenew/static/css/main.d9802ec3.chunk.css.map",
+    "static/js/2.c8621719.chunk.js.LICENSE.txt": "/wiki_recipenew/static/js/2.c8621719.chunk.js.LICENSE.txt",
+    "static/media/react-summernote.css": "/wiki_recipenew/static/media/summernote.bd0d8be1.eot"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4bb7e300.js",
+    "static/css/2.5c5525dd.chunk.css",
+    "static/js/2.c8621719.chunk.js",
+    "static/css/main.d9802ec3.chunk.css",
+    "static/js/main.2eb07fa9.chunk.js"
+  ]
+}
