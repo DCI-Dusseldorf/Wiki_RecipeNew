@@ -11,17 +11,17 @@ body {
 }
 
 .main {
-  min-height: 90vh;
+  min-height: 85vh;
   width: 100%;
   display: flex;
   height: auto;
 }
 
 .content {
-  height: 90vh;
+  height: 85vh;
   overflow-y: auto;
   padding: 30px;
-  width: 90vw;
+  width: 85vw;
   background-color: rgb(236, 236, 236);
 }
 .content img {

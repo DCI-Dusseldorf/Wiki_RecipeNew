@@ -9,21 +9,13 @@
   align-items: center;
   background: url('https://www.wallpaperbetter.com/wallpaper/261/338/440/baroque-floral-1080P-wallpaper.jpg');
   background-position: left;
-  background-size: 1200px;
-
- 
-
-
-
-
+  background-size: 1300px;
   color: white;
-
-  height: 10vh;
- 
+  height: 15vh;
 
   .navHeader {
-    color:#ffff;
-    font-size: 30px;
+    color: #ffff;
+    font-size: 50px;
     font-weight: 400;
     margin-left: 220px;
     font-family: 'Anton', sans-serif;
@@ -37,25 +29,45 @@
       text-decoration: none;
       margin-left: 10px;
       margin-right: 15px;
-      color:#ffff;
-      -webkit-text-stroke: 1px  #7f6542;
-      
-      
+      color: #ffff;
+      -webkit-text-stroke: 1px #7f6542;
     }
   }
 }
-#logo{
-  color:
-  #847b52;
+#logo {
+  color: #847b52;
   font-size: 30px;
   padding: 0 5px;
-  background-color:#f0cc6a;
+  background-color: #f0cc6a;
   border-radius: 2px;
- 
 }
-// .logo {
-//   color: white;
-//   font-size: 30px;
-//   margin-left: 40px;
-//   margin-bottom: 15px;
-// }
+
+@media screen and (max-width: 600px) {
+  .nav .navLinks .link {
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    margin: auto;
+    color: #ffff;
+    -webkit-text-stroke: 1px #7f6542;
+  }
+  #logo {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav .navHeader {
+    color: #ffff;
+    font-size: 20px;
+    margin: auto;
+    font-family: 'Anton', sans-serif;
+    -webkit-text-stroke: 1px #7f6542;
+  }
+  .content {
+    padding: 0px;
+  }
+  .Jumbo {
+    margin: auto;
+  }
+}
